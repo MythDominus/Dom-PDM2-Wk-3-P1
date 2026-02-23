@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDM2 - W3P1 - 2 Star Exercise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./lib/main-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./lib/libraries/p5.min.js"></script>
+    <script src="./lib/libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <h1>2 Star Exercise</h1>
+    <p>Your sketch:</p>
+    <div class="guidance">
+        <h2>Instructions</h2>
+        <div>
+            <p>One advantage of moving some code, particularly classes, into separate files is 
+                that it makes the code easily reusable across sketches. Your task is create 
+                a standalone class representing a creature or character (you may recycle your PDM 1 character), 
+                then develop two different animated sketches that use the same creature. Here are 
+                the steps:
+            </p>
+            <ol>
+                <li>Create a new JavaScript file. It will contain your creature class so name it appropriately.</li>
+                <li>Add a &lt;script&gt; tag to this HTML file to connect your new file.</li>
+                <li>Put the p5.js <code>setup()</code> and <code>draw()</code> functions as well as any global 
+                variables you need in sketch.js and write your creature class in the file created in step 1. Try 
+        to design your class to be as multi-purpose as possible!</li>
+                <li>Do something creative but not too taxing with your creature in sketch.js e.g. make it move with the mouse.</li>
+                <li>Create another JavaScript file. This will be your second sketch so name it something appropriate e.g. 
+                    sketch2.js.
+                </li>
+                <li>Link your new sketch file and your creature file in the other HTML file (2star-secondSketch.html) in this sketch folder.</li>
+                <li>Finally, do something different with your creature in your second sketch e.g. make an army of creatures. If your class 
+                    is well designed, you should be able to run both sketches at the same time and see different behaviour in each.
+                </li>
+            </ol>
+            <p>There is an example of a pair of sketches that both use the same character in the <a href="https://github.com/UoY-IM-PDM2-2324/PDM2-example-code/tree/main/Practical%20solutions/W3P1/2star" target="_blank">example code repo</a>. 
+                The videos below show the output of each sketch. In the first sketch, the penguin walks back and forth and honks when the user presses "h". In 
+                the second sketch, one penguin is controlled by the user ("a", "d", and "j" keys) and the others appear when as eggs hatch. The same <code>Penguin</code> class 
+                is used to draw and move all penguins in both sketches.
+            </p>
+            <p>
+                <video width="400" height="400" controls>
+                    <source src="./assets/sketch1.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </p>
+            <p>
+                <video width="600" height="300" controls>
+                    <source src="./assets/sketch2.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="hint">
+                Hint
+            </button>
+            <div class="collapse" id="hint">
+                <div class="card card-body">
+                    <p>The file created in step 1 should contain only the creature class. Do not put any code 
+                        specific to one sketch in the file, otherwise your are likely to have side effects in your 
+                        other sketch. 
+                    </p>
+                    <p>If you get error messages stating that something is undefined, see if you need to swap the order in 
+                        which the JavaScript files are linked in the HTML.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>

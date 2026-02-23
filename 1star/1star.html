@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDM2 - W3P1 - 1 Star Exercise</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./lib/main-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="./lib/libraries/p5.min.js"></script>
+    <script src="./lib/libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <h1>1 Star Exercise</h1>
+    <p>Your sketch:</p>
+    <div class="guidance">
+        <h2>Instructions</h2>
+        <div>
+            <p>This exercise will walk you through the steps of creating an additional JS file and linking it in the HTML.</p>
+            <ol>
+                <li>Select the sketch folder ("1star") or any of the individual files in the sketch folder (but not one of the nested folders).</li>
+                <li>Click the new file icon in the Explorer pane. It will be the first button that appears just to the right of the practical name when you move your mouse near it.</li>
+                <li>Name the new file <strong>ball.js</strong>. Don't forget the extension ".js" otherwise it won't be recognised as a JavaScript file.</li>
+                <li>In ball.js, write a class to represent a ball. At a minimum, it should have instance variables for a ball's x and y coordinates, and a method that draws the 
+                    ball (just the ball, not a background). Eventually, 
+                    you will use your class to create an animation of your choosing. An example is shown below but you may do something different. Feel free to 
+                    add more instance variables and methods depending on what you would like to use the class for.</li>
+                <li>Next, look at the code for this file, 1star.html. Scroll all the way down until you see the <code>&lt;script&gt;</code> tag that links sketch.js. 
+                Above or below the <code>&lt;script&gt;</code> tag, add another <code>&lt;script&gt;</code> tag that links the new ball.js file:
+                    <pre>
+&lt;script src="ball.js"&gt;&lt;/script&gt;                
+                    </pre>
+            </li>
+            <li>In sketch.js, write a sketch that uses the class in the other file in some way (see video for inspiration). You should be able to just use it as if it was defined 
+                in sketch.js. If you see an error message that says your class is not defined, try swapping the script tags.
+            </li>
+            </ol>
+            <p>Example output:</p>
+            <p>
+                <video width="400" height="400" controls>
+                    <source src="./assets/exercise1-1.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-primary hint" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="hint">
+                Hint
+            </button>
+            <div class="collapse" id="hint">
+                <div class="card card-body">
+                    <p>If you would like to create an effect similar to what is shown in the video, where the 
+                        balls move away from the mouse, you will find the p5.js <a href="https://p5js.org/reference/#/p5/pmouseX" target="_blank"><code>pmouseX</code></a> and <a href="https://p5js.org/reference/#/p5/pmouseY" target="_blank"><code>pmouseY</code></a> system 
+                        variables useful. The effect is created by using the current and previous values of the mouse coordinates to 
+                        work out if the mouse is travelling in a positive or negative direction on each axis, then moving 
+                        the ball in the same direction so it looks like it's moving away.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
